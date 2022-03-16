@@ -1,7 +1,7 @@
 const biodata = {
     name : "Donny",
     age : 23,
-    hobbies : ["gaming", "watch anime", "watch movies", "menghalu"],
+    hobbies : ["game", "watch anime", "watch movies", "menghalu"],
     IsMarried : false,
     schoolList : [ 
         {            
