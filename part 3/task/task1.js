@@ -1,5 +1,5 @@
-const cehHariKerja = (day) => {
-    return new Promise((resolve, result) => {
+const cekHariKerja = (day) => {
+    return new Promise((resolve, reject) => {
         setTimeout(() => {
             const dataDay = ['senin', 'selasa', 'rabu', 'kamis', 'jumat']
             let cek = dataDay.find((item) => {
@@ -14,18 +14,21 @@ const cehHariKerja = (day) => {
     })
 }
 
-cehHariKerja("minggu").then((hari) => {
+cekHariKerja("senin").then((hari) => {
     console.log(hari)
-}).catch((Error) => {
-    console.log(Error)
+}).catch((error) => {
+    console.log(error)
 }).finally(() => {
     console.log("proses telah selesai")
 })
 
-// async function cek() {
+// async function cekHari(day) {
 //     try {
-
-//     } catch {
-
+//         let result = await cekHariKerja(day)
+//         console.log(result)
+//     } catch(error) {
+//         console.log(error)
 //     }
 // }
+
+// cekHari("sabtu")
