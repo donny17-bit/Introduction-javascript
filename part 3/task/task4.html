@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        fetch('https://jsonplaceholder.typicode.com/users').then((response) => {
-            return response.json();
-        }).then((user) => {
-            user.map((value) => {
-            console.log(value.name)
+      fetch("https://jsonplaceholder.typicode.com/users")
+        .then((response) => {
+          return response.json();
         })
-    }).catch((error) => {
-        console.log(error)
-    })
-        // output :
-        // Leanne Graham
-        // Ervin Howell
-        // ...
+        .then((user) => {
+          user.map((value) => {
+            console.log(value.name);
+          });
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      // output :
+      // Leanne Graham
+      // Ervin Howell
+      // ...
     </script>
-</body>
+  </body>
 </html>
